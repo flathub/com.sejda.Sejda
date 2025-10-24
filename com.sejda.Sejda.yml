@@ -39,10 +39,11 @@ modules:
 
       - type: extra-data
         filename: sejda.deb
-        only-arches: [x86_64]
-        url: https://downloads.sejda-cdn.com/sejda-desktop_7.7.0_amd64.deb
-        sha256: bddab1c9fbea145a56eb54bd558fbba357d20e05bffdcbd3eef5c38a34a142eb
-        size: 260647028
+        only-arches:
+          - x86_64
+        sha256: ac010abaa76d11621dcf6b9f28a5f53a1dbe5daf7337278cc95829c0be7a35d6
+        size: 276310228
+        url: https://downloads.sejda-cdn.com/sejda-desktop_7.9.3_amd64.deb
         x-checker-data:
           type: html
           url: https://www.sejda.com/desktop
