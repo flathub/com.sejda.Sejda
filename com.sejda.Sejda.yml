@@ -1,9 +1,9 @@
 id: com.sejda.Sejda
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: '25.08'
 command: sejda-desktop
 separate-locales: false
 
