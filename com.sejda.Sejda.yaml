@@ -1,42 +1,29 @@
 id: com.sejda.Sejda
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '25.08'
+base-version: "25.08"
 command: sejda-desktop
 separate-locales: false
-
 finish-args:
-  - --share=ipc
-  - --share=network
-  - --socket=x11
-  - --socket=cups
   - --device=dri
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
-
+  - --share=ipc
+  - --share=network
+  - --socket=cups
+  - --socket=fallback-x11
+  - --socket=wayland
 modules:
   - name: sejda
     buildsystem: simple
     build-commands:
       - install -Dm755 apply_extra -t $FLATPAK_DEST/bin
       - install -Dm755 sejda.sh $FLATPAK_DEST/bin/sejda-desktop
-      - install -Dm644 com.sejda.Sejda.metainfo.xml -t $FLATPAK_DEST/share/metainfo
-      - install -Dm644 com.sejda.Sejda.svg -t $FLATPAK_DEST/share/icons/hicolor/scalable/apps
-      - install -Dm644 com.sejda.Sejda.desktop -t $FLATPAK_DEST/share/applications
+      - install -Dm644 com.sejda.Sejda.metainfo.xml -t $FLATPAK_DEST/share/metainfo/
+      - install -Dm644 com.sejda.Sejda.svg -t $FLATPAK_DEST/share/icons/hicolor/scalable/apps/
+      - install -Dm644 com.sejda.Sejda.desktop -t $FLATPAK_DEST/share/applications/
     sources:
-      - type: script
-        dest-filename: sejda.sh
-        commands:
-          - exec zypak-wrapper /app/extra/sejda-desktop/sejda-desktop "$@"
-
-      - type: script
-        dest-filename: apply_extra
-        commands:
-          - bsdtar --to-stdout -xf sejda.deb data.* | bsdtar -xf -
-          - mv opt/sejda-desktop .
-          - rm -rf sejda.deb usr opt data.*
-
       - type: extra-data
         filename: sejda.deb
         only-arches:
@@ -48,12 +35,21 @@ modules:
           type: html
           url: https://www.sejda.com/desktop
           pattern: (https://downloads.sejda-cdn.com/sejda-desktop_([\d\.-]*)_amd64.deb)
-
-      - type: file
-        path: com.sejda.Sejda.metainfo.xml
-
       - type: file
         path: com.sejda.Sejda.desktop
-
       - type: file
         path: com.sejda.Sejda.svg
+      - type: file
+        path: com.sejda.Sejda.metainfo.xml
+      - type: script
+        commands:
+          - bsdtar --to-stdout -xf sejda.deb data.* | bsdtar -xf -
+          - mv opt/sejda-desktop .
+          - rm -rf sejda.deb usr opt data.*
+        dest-filename: apply_extra
+      - type: script
+        commands:
+          - export ELECTRON_OZONE_PLATFORM_HINT="auto"
+          - export TMPDIR="${XDG_RUNTIME_DIR}/app/${FLATPAK_ID}"
+          - exec zypak-wrapper /app/extra/sejda-desktop/sejda-desktop "$@"
+        dest-filename: sejda.sh
