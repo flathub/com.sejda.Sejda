@@ -32,9 +32,11 @@ modules:
         size: 276310228
         url: https://downloads.sejda-cdn.com/sejda-desktop_7.9.3_amd64.deb
         x-checker-data:
+          is-main-source: true
           type: html
+          url-template: https://downloads.sejda-cdn.com/sejda-desktop_${version}_amd64.deb
           url: https://www.sejda.com/desktop
-          pattern: (https://downloads.sejda-cdn.com/sejda-desktop_([\d\.-]*)_amd64.deb)
+          version-pattern: sejda-desktop_([0-9]+\.[0-9]+\.[0-9]+)_amd64.deb
       - type: file
         path: com.sejda.Sejda.desktop
       - type: file
