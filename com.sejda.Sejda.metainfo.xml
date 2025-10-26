@@ -1,38 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
+  <content_rating type="oars-1.1" />
+  <description>
+    <p>
+      Sejda PDF Desktop is a fast, user-friendly PDF application for editing, merging, splitting,
+      compressing, and signing PDFs offline.
+    </p>
+    <p>
+      Supports text editing, form filling, page reordering, OCR, and secure encryption; designed
+      for both casual and power users with a clean, touch-friendly interface.
+    </p>
+    <p>Sejda PDF Desktop is free to use with daily limits.</p>
+    <p>It supports a wide range of document tasks, including:</p>
+    <ul>
+      <li>Merge files into one PDF file</li>
+      <li>Split PDF files by pages or size, extract documents, bookmarks, or text occurrences</li>
+      <li>Convert PDFs to Word, Excel, or image formats</li>
+      <li>Compress PDF files by optimizing images and other resources</li>
+      <li>
+        Edit PDF files — Add, edit, or move text; change font, size, and style; insert, reorder,
+        move, or delete pages; add signatures, highlights, and shapes
+      </li>
+      <li>Add password protection and set copy/edit restrictions to documents</li>
+      <li>Add image or text watermarks to documents</li>
+      <li>Convert text and images to grayscale</li>
+      <li>Trim margins, adjust visible page area, and change page size</li>
+    </ul>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Sejda BV.**</p>
+  </description>
+  <developer_name>Sejda BV</developer_name>
   <id>com.sejda.Sejda</id>
+  <launchable type="desktop-id">com.sejda.Sejda.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
   <name>Sejda PDF Desktop</name>
   <project_license>LicenseRef-proprietary</project_license>
-  <developer_name>Sejda BV</developer_name>
-  <summary>PDF editor</summary>
-  <metadata_license>CC0-1.0</metadata_license>
-  <launchable type="desktop-id">com.sejda.Sejda.desktop</launchable>
-  <url type="homepage">https://www.sejda.com/desktop</url>
-  <description>
-    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Sejda BV.</p>
-    <p>Sejda PDF Desktop is a PDF editor, and it is free to use with daily limits.</p>
-    <p>It helps with your PDF tasks:</p>
-    <ul>
-      <li>Merge files into one PDF</li>
-      <li>Split PDF files</li>
-      <li>Convert PDF files to Office and image formats</li>
-      <li>Compress PDF</li>
-      <li>Edit PDF files</li>
-      <li>Apply PDF passwords and restrictions</li>
-      <li>Watermark PDF</li>
-      <li>Grayscale PDF</li>
-      <li>Crop PDF</li>
-    </ul>
-  </description>
+  <releases>
+    <release version="7.9.3" date="2025-09-14">
+      <description />
+    </release>
+  </releases>
   <screenshots>
     <screenshot type="default">
       <image>https://www.sejda.com/images/pages/desktop/desktop-screenshot-ubuntu.png</image>
     </screenshot>
   </screenshots>
-  <releases>
-    <release version="7.9.3" date="2025-09-14" />
-    <release version="7.7.0" date="2024-05-01" />
-  </releases>
-  <content_rating type="oars-1.1"/>
-  <update_contact>libera@disroot.org</update_contact>
+  <summary>Productive PDF Software That You'll Love to Use</summary>
+  <update_contact>hi@sejda.com</update_contact>
+  <url type="homepage">https://www.sejda.com/desktop/</url>
 </component>
