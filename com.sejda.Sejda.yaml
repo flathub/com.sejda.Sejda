@@ -39,12 +39,8 @@ modules:
         path: com.sejda.Sejda.metainfo.xml
       - type: file
         path: com.sejda.Sejda.svg
-      - type: script
-        commands:
-          - export ELECTRON_OZONE_PLATFORM_HINT="auto"
-          - export TMPDIR="${XDG_RUNTIME_DIR}/app/${FLATPAK_ID}"
-          - exec zypak-wrapper /app/extra/sejda-desktop/sejda-desktop "$@"
-        dest-filename: entrypoint.sh
+      - type: file
+        path: entrypoint.sh
       - type: script
         commands:
           - bsdtar -x -f sejda-desktop_amd64.deb

@@ -1,9 +1,10 @@
 # Sejda PDF Desktop
 
-[Sejda PDF Desktop][uri-sejda-pdf-desktop-home] is a versatile, fast, user-friendly PDF management
-software for editing, merging, splitting, compressing, and signing PDFs offline.
+[Sejda PDF Desktop][uri-sejda-desktop-home] is a versatile, fast, user-friendly
+PDF management software for editing, merging, splitting, compressing, and
+signing PDFs offline.
 
-[uri-sejda-pdf-desktop-home]: https://www.sejda.com/desktop "Productive PDF Software That You'll Love to Use"
+[uri-sejda-desktop-home]: https://www.sejda.com/desktop/ "Productive PDF Software That You'll Love to Use"
 
 ## Local Development — Build and Install Flatpak
 
@@ -31,4 +32,14 @@ To clean up build artifacts and Flatpak state:
 $ rm --force --recursive .flatpak-builder/ build/
 $ flatpak uninstall --unused --user
 $ flatpak remote-delete --user flathub
+```
+
+## Additional Flatpak Debug Logging
+
+Set `SEJDA_DEBUG_ENABLED="true"` when launching the Flatpak so the application
+prints some information that may be needed when reporting issues.
+
+```shell
+$ export SEJDA_DEBUG_ENABLED="true"
+$ flatpak run com.sejda.Sejda
 ```
