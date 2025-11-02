@@ -13,11 +13,11 @@ id: com.sejda.Sejda
 modules:
   - name: sejda
     build-commands:
-      - install -D -m 644 -t /app/share/applications/ ${FLATPAK_ID}.desktop
-      - install -D -m 644 -t /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
-      - install -D -m 644 -t /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
-      - install -D -m 755 entrypoint.sh /app/bin/sejda-desktop
       - install -D -m 755 post-install-setup.sh /app/bin/apply_extra
+      - install -D -m 755 entrypoint.sh /app/bin/sejda-desktop
+      - install -D -m 644 -t /app/share/applications/ ${FLATPAK_ID}.desktop
+      - install -D -m 644 -t /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
+      - install -D -m 644 -t /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
     buildsystem: simple
     sources:
       - type: extra-data
@@ -43,10 +43,9 @@ modules:
         path: entrypoint.sh
       - type: script
         commands:
-          - bsdtar -x -f sejda-desktop_amd64.deb
-          - bsdtar -x -f data.tar.gz
-          - mv opt/sejda-desktop/ .
-          - rm -f -r opt/ usr/ control.tar.gz data.tar.gz debian-binary sejda-desktop_amd64.deb
+          - bsdtar -x -f sejda-desktop_amd64.deb data.tar.gz
+          - bsdtar -x -f data.tar.gz --strip-components=3 opt/sejda-desktop/
+          - rm data.tar.gz sejda-desktop_amd64.deb
         dest-filename: post-install-setup.sh
 runtime-version: "25.08"
 runtime: org.freedesktop.Platform
