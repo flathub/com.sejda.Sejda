@@ -1,6 +1,6 @@
 base-version: "25.08"
 base: org.electronjs.Electron2.BaseApp
-command: sejda-desktop
+command: sejda-pdf-desktop
 finish-args:
   - --device=dri
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
@@ -11,17 +11,17 @@ finish-args:
   - --socket=wayland
 id: com.sejda.Sejda
 modules:
-  - name: sejda
+  - name: sejda-pdf-desktop
     build-commands:
       - install -D -m 755 post-install-setup.sh /app/bin/apply_extra
-      - install -D -m 755 entrypoint.sh /app/bin/sejda-desktop
+      - install -D -m 755 entrypoint.sh /app/bin/sejda-pdf-desktop
       - install -D -m 644 -t /app/share/applications/ ${FLATPAK_ID}.desktop
       - install -D -m 644 -t /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
       - install -D -m 644 -t /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
     buildsystem: simple
     sources:
       - type: extra-data
-        filename: sejda-desktop_amd64.deb
+        filename: sejda-pdf-desktop.deb
         only-arches:
           - x86_64
         sha256: ac010abaa76d11621dcf6b9f28a5f53a1dbe5daf7337278cc95829c0be7a35d6
@@ -43,9 +43,9 @@ modules:
         path: entrypoint.sh
       - type: script
         commands:
-          - bsdtar -x -f sejda-desktop_amd64.deb data.tar.gz
+          - bsdtar -x -f sejda-pdf-desktop.deb data.tar.gz
           - bsdtar -x -f data.tar.gz --strip-components=3 opt/sejda-desktop/
-          - rm data.tar.gz sejda-desktop_amd64.deb
+          - rm data.tar.gz sejda-pdf-desktop.deb
         dest-filename: post-install-setup.sh
 runtime-version: "25.08"
 runtime: org.freedesktop.Platform
