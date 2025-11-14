@@ -23,4 +23,4 @@ if [[ "${SEJDA_DEBUG_ENABLED:-}" == "true" ]]; then
   printf "XDG_SESSION_TYPE: %s\n" "${XDG_SESSION_TYPE:-}"
 fi
 
-exec zypak-wrapper "/app/extra/sejda-pdf-desktop" "${ADDITIONAL_ARGS[@]}" "$@"
+exec zypak-wrapper "/app/extra/sejda-desktop" "${ADDITIONAL_ARGS[@]}" "$@"
