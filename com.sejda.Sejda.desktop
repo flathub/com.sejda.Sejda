@@ -1,12 +1,14 @@
 [Desktop Entry]
+# REQUIRED
+Name=Sejda PDF Desktop
+Type=Application
+# OPTIONAL
 Categories=Office;GNOME;TextTools;
-Exec=sejda-pdf-desktop
-GenericName=Productive PDF Software That You'll Love to Use
+Comment=Productive PDF Software That You'll Love to Use
+Exec=/app/bin/sejda-pdf-desktop
 Icon=com.sejda.Sejda
 Keywords=editor;merge;pdf;split;
-Name=Sejda PDF Desktop
-StartupNotify=true
+StartupNotify=false
 StartupWMClass=sejda-pdf-desktop
 Terminal=false
-Type=Application
 Version=1.0
