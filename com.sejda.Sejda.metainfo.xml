@@ -2,6 +2,7 @@
 <component type="desktop-application">
   <content_rating type="oars-1.1" />
   <description>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Sejda BV.**</p>
     <p>
       Sejda PDF Desktop is a fast, user-friendly PDF application for editing, merging, splitting,
       compressing, and signing PDFs offline.
@@ -26,7 +27,6 @@
       <li>Convert text and images to grayscale</li>
       <li>Trim margins, adjust visible page area, and change page size</li>
     </ul>
-    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Sejda BV.**</p>
   </description>
   <developer_name>Sejda BV</developer_name>
   <id>com.sejda.Sejda</id>
