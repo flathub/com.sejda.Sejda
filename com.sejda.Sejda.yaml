@@ -9,6 +9,7 @@ finish-args:
   - --socket=cups
   - --socket=fallback-x11
   - --socket=wayland
+  - --talk-name=org.freedesktop.secrets
 id: com.sejda.Sejda
 modules:
   - name: sejda-pdf-desktop
