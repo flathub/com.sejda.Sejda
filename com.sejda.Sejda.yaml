@@ -4,12 +4,12 @@ command: sejda-pdf-desktop
 finish-args:
   - --device=dri
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
+  - --persist=.sejda
   - --share=ipc
   - --share=network
   - --socket=cups
   - --socket=fallback-x11
   - --socket=wayland
-  - --talk-name=org.freedesktop.secrets
 id: com.sejda.Sejda
 modules:
   - name: sejda-pdf-desktop
