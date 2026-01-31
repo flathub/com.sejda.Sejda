@@ -4,7 +4,8 @@ command: sejda-pdf-desktop
 finish-args:
   - --device=dri
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
-  - --persist=.sejda
+  - --persist=.
+  - --persist=.sejda-desktop
   - --share=ipc
   - --share=network
   - --socket=cups
