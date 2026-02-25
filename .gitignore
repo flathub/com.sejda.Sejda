@@ -4,13 +4,11 @@
 
 .flatpak-builder/
 
-.fleet/
-!.fleet/*.json
-
 .idea/
 
 .settings/
 
+.vscode/
 !.vscode/*.json
 
 .zed/
