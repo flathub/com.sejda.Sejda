@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <description>
     <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Sejda BV.**</p>
     <p>
@@ -35,8 +35,11 @@
   <name>Sejda PDF Desktop</name>
   <project_license>LicenseRef-proprietary</project_license>
   <releases>
+    <release version="7.9.5" date="2026-06-23">
+      <description></description>
+    </release>
     <release version="7.9.3" date="2025-09-14">
-      <description />
+      <description/>
     </release>
   </releases>
   <screenshots>

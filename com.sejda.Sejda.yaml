@@ -1,4 +1,4 @@
-base-version: "25.08"
+base-version: '25.08'
 base: org.electronjs.Electron2.BaseApp
 command: sejda-pdf-desktop
 finish-args:
@@ -26,9 +26,9 @@ modules:
         filename: sejda-pdf-desktop.deb
         only-arches:
           - x86_64
-        sha256: ac010abaa76d11621dcf6b9f28a5f53a1dbe5daf7337278cc95829c0be7a35d6
-        size: 276310228
-        url: https://downloads.sejda-cdn.com/sejda-desktop_7.9.3_amd64.deb
+        sha256: a1858711174734af17cb113ff970ef8a570fc85160708c3d1c3bf5dad2cbda8b
+        size: 297048000
+        url: https://downloads.sejda-cdn.com/sejda-desktop_7.9.5_amd64.deb
         x-checker-data:
           is-main-source: true
           type: html
@@ -49,7 +49,7 @@ modules:
           - bsdtar -x -f data.tar.gz --strip-components=3 opt/sejda-desktop/
           - rm data.tar.gz sejda-pdf-desktop.deb
         dest-filename: post-install-setup.sh
-runtime-version: "25.08"
+runtime-version: '25.08'
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 separate-locales: false
