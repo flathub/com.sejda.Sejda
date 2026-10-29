@@ -34,8 +34,11 @@
   <name>Sejda PDF Desktop</name>
   <project_license>LicenseRef-proprietary</project_license>
   <releases>
-    <release version="7.9.10" date="2026-08-21">
+    <release version="7.9.12" date="2026-10-27">
       <description></description>
+    </release>
+    <release version="7.9.10" date="2026-08-21">
+      <description/>
     </release>
     <release version="7.9.3" date="2025-09-14">
       <description/>
