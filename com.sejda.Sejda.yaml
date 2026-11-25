@@ -26,9 +26,9 @@ modules:
         filename: sejda-pdf-desktop.deb
         only-arches:
           - x86_64
-        sha256: 9551d58c1e6931e812c910141a57e26bdb25cacf30d2d3d3f74257698389120c
-        size: 281065268
-        url: https://downloads.sejda-cdn.com/sejda-desktop_7.9.12_amd64.deb
+        sha256: a639908c6bc0a845162e1fafdb46939986c904d82e2cb9bc4a7db2ba33cb3c3e
+        size: 269105106
+        url: https://downloads.sejda-cdn.com/sejda-desktop_7.10.2_amd64.deb
         x-checker-data:
           is-main-source: true
           type: html
