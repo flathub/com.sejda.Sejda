@@ -32,7 +32,7 @@
   <launchable type="desktop-id">com.sejda.Sejda.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <name>Sejda PDF Desktop</name>
-  <project_license>LicenseRef-proprietary</project_license>
+  <project_license>LicenseRef-proprietary=https://www.sejda.com/eula</project_license>
   <releases>
     <release version="7.10.2" date="2026-11-24">
       <description></description>
